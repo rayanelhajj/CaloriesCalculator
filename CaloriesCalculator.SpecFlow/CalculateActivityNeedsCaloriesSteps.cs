@@ -25,6 +25,7 @@ namespace CaloriesCalculator.SpecFlow
     [Given(@"I have entered my (.*)")]
     public void GivenIHaveEnteredMy(int activity_level)
     {
+      user.GetActivity_Level = (User.Activity_Level) activity_level;
       activity_factor = CaloriesCalculator.Get_Activity_Factor(user);
     }
 

@@ -108,6 +108,78 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.TheoryAttribute(DisplayName="Calculate activity calories for medium active user")]
+        [Xunit.TraitAttribute("FeatureTitle", "CalculateActivityNeedsCalories")]
+        [Xunit.TraitAttribute("Description", "Calculate activity calories for medium active user")]
+        [Xunit.InlineDataAttribute("1432", "1", "429.6", new string[0])]
+        [Xunit.InlineDataAttribute("1331", "1", "399.3", new string[0])]
+        [Xunit.InlineDataAttribute("1757", "1", "527.1", new string[0])]
+        public virtual void CalculateActivityCaloriesForMediumActiveUser(string basicCalories, string activity, string activity_Needs, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate activity calories for medium active user", null, exampleTags);
+#line 19
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 20
+ testRunner.Given(string.Format("I have calculated my {0}", basicCalories), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+ testRunner.And(string.Format("I have entered my {0}", activity), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.When("I press calculate activity needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+ testRunner.Then(string.Format("the result should be {0}", activity_Needs), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute(DisplayName="Calculate activity calories for highly active user")]
+        [Xunit.TraitAttribute("FeatureTitle", "CalculateActivityNeedsCalories")]
+        [Xunit.TraitAttribute("Description", "Calculate activity calories for highly active user")]
+        [Xunit.InlineDataAttribute("1432", "2", "572.8", new string[0])]
+        [Xunit.InlineDataAttribute("1331", "2", "532.4", new string[0])]
+        [Xunit.InlineDataAttribute("1757", "2", "702.8", new string[0])]
+        public virtual void CalculateActivityCaloriesForHighlyActiveUser(string basicCalories, string activity, string activity_Needs, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate activity calories for highly active user", null, exampleTags);
+#line 31
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 32
+ testRunner.Given(string.Format("I have calculated my {0}", basicCalories), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 33
+ testRunner.And(string.Format("I have entered my {0}", activity), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.When("I press calculate activity needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+ testRunner.Then(string.Format("the result should be {0}", activity_Needs), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute(DisplayName="Calculate activity calories for extremely active user")]
+        [Xunit.TraitAttribute("FeatureTitle", "CalculateActivityNeedsCalories")]
+        [Xunit.TraitAttribute("Description", "Calculate activity calories for extremely active user")]
+        [Xunit.InlineDataAttribute("1432", "3", "716.0", new string[0])]
+        [Xunit.InlineDataAttribute("1331", "3", "665.5", new string[0])]
+        [Xunit.InlineDataAttribute("1757", "3", "878.5", new string[0])]
+        public virtual void CalculateActivityCaloriesForExtremelyActiveUser(string basicCalories, string activity, string activity_Needs, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate activity calories for extremely active user", null, exampleTags);
+#line 43
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 44
+ testRunner.Given(string.Format("I have calculated my {0}", basicCalories), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 45
+ testRunner.And(string.Format("I have entered my {0}", activity), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+ testRunner.When("I press calculate activity needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 47
+ testRunner.Then(string.Format("the result should be {0}", activity_Needs), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
