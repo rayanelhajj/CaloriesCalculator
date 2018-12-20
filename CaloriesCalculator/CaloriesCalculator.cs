@@ -32,19 +32,16 @@ namespace CaloriesCalculator
       switch (user.Age_Category)
       {
         case User.Age_Categories.Adult:
-          // Age 18 - 30 -> (15.4 * weight) + 679
           if (user.Gender == User.Gender_Val.MALE)
           {
             calories = (int)(15.4 * user.Weight) + 679;
           }
-          // Age 18 - 30 -> (14.7 * weight) + 496
           if (user.Gender == User.Gender_Val.FEMALE)
           {
             calories = (int)(14.7 * user.Weight) + 496;
           }
           break;
         case User.Age_Categories.MidAged:
-          // Age 30 - 60 -> (11.6 * weight) + 879
           if (user.Gender == User.Gender_Val.MALE)
           {
             calories = (int)(11.6 * user.Weight) + 879;
@@ -100,6 +97,8 @@ namespace CaloriesCalculator
       }
 
       double activity_needs = user.Basic_Calories * activity_Factor;
+      user.Activity_Calories = activity_needs;
+
       return activity_needs;
     }
 
@@ -110,6 +109,7 @@ namespace CaloriesCalculator
         return 0.0;
       }
       double digestion_calories = (user.Basic_Calories + user.Activity_Calories) * 0.1;
+      user.Digestion_Calories = digestion_calories;
 
       return digestion_calories;
     }
@@ -122,6 +122,7 @@ namespace CaloriesCalculator
       }
       int total_calories = (int)(user.Basic_Calories + user.Activity_Calories + user.Digestion_Calories);
       user.Total_Calories = total_calories;
+
       return total_calories;
     }
   }

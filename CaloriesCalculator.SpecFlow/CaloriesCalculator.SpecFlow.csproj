@@ -78,6 +78,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculateActivityNeedsCalories.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalculateActivityNeedsCalories.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CalculateActivityNeedsCaloriesSteps.cs" />
     <Compile Include="CalculateBasicCalories.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +96,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CalculateActivityNeedsCalories.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CalculateActivityNeedsCalories.feature.cs</LastGenOutput>
+    </None>
     <None Include="CalculateBasicCalories.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculateBasicCalories.feature.cs</LastGenOutput>
